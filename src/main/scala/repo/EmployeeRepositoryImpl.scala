@@ -38,6 +38,15 @@ class EmployeeRepositoryImpl(pool: ConnectionPool)
 //      .provideLayer(driverLayer)
 //      .mapError(e => RepositoryError(e.getCause))
     ???
+
+    execute(
+      update(employees)
+      .set(name, employee.name)
+      .set(role, employee.role)
+      .where(empId === employee.id)
+    )
+      .provideLayer(driverLayer)
+      .mapError(e => RepositoryError(e))
   }
 
   override def deleteById(id: UUID): ZIO[Any, RepositoryError, Int] = {
@@ -60,7 +69,7 @@ class EmployeeRepositoryImpl(pool: ConnectionPool)
           )
         )
 
-    ZIO.logInfo(s"Query to insert customer is ${renderInsert(query)}") *>
+    ZIO.logInfo(s"Query to insert employee is ${renderInsert(query)}") *>
       execute(query)
         .provideAndLog(driverLayer)
         .unit

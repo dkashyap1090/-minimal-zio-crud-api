@@ -16,16 +16,12 @@ lazy val root = (project in file("."))
     name := "minimal-zio-crud-api",
     libraryDependencies ++= Seq(
       //zio
-      //core
       "dev.zio" %% "zio" % zioVersion,
       //http
       "io.d11" %% "zhttp"      % zioHttpVersion,
       "io.d11" %% "zhttp-test" % zioHttpVersion % Test,
       //sql
       "dev.zio" %% "zio-sql-postgres" % zioSqlVersion,
-      //http
-      "io.d11" %% "zhttp" % zioHttpVersion,
-      "io.d11" %% "zhttp-test" % zioHttpVersion % Test,
       //config
       "dev.zio" %% "zio-config" % zioConfigVersion,
       "dev.zio" %% "zio-config-typesafe" % zioConfigVersion,

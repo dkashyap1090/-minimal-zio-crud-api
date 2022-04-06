@@ -1,20 +1,9 @@
-[0m[[0m[31merror[0m] [0m[0m/Users/dhirendrakashyap/Projects/minimal-zio-crud-api/src/main/scala/config/DbConfig.scala:25:28: not found: value nested[0m
-[0m[[0m[31merror[0m] [0m[0m  val dbConfigDescriptor = nested("db-config")(descriptor[DbConfig])[0m
-[0m[[0m[31merror[0m] [0m[0m                           ^[0m
-[0m[[0m[33mwarn[0m] [0m[0m/Users/dhirendrakashyap/Projects/minimal-zio-crud-api/src/main/scala/Application.scala:22:15: [0m
-[0m[[0m[33mwarn[0m] [0m[0m[0m
-[0m[[0m[33mwarn[0m] [0m[0m[33m──── ZLAYER WARNING ──────────────────────────────────────────────────[0m[0m
-[0m[[0m[33mwarn[0m] [0m[0m[0m
-[0m[[0m[33mwarn[0m] [0m[0m [1mYou have provided more than is required.[0m[0m
-[0m[[0m[33mwarn[0m] [0m[0m You may remove the following [1m3 layers[0m:[0m
-[0m[[0m[33mwarn[0m] [0m[0m   [0m
-[0m[[0m[33mwarn[0m] [0m[0m   [2m1.[0m [36mConnectionPool.live[0m[0m
-[0m[[0m[33mwarn[0m] [0m[0m   [2m2.[0m [36mClock.live[0m[0m
-[0m[[0m[33mwarn[0m] [0m[0m   [2m3.[0m [36mDbConfig.connectionPoolConfig[0m[0m
-[0m[[0m[33mwarn[0m] [0m[0m  [0m
-[0m[[0m[33mwarn[0m] [0m[0m[33m──────────────────────────────────────────────────────────────────────[0m[0m
-[0m[[0m[33mwarn[0m] [0m[0m[0m
-[0m[[0m[33mwarn[0m] [0m[0m      .provide([0m
-[0m[[0m[33mwarn[0m] [0m[0m              ^[0m
-[0m[[0m[33mwarn[0m] [0m[0mone warning found[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/dhirendrakashyap/Projects/minimal-zio-crud-api/src/main/scala/repo/EmployeeRepositoryImpl.scala:42:5: overloaded method execute with alternatives:[0m
+[0m[[0m[31merror[0m] [0m[0m  [A](insert: EmployeeRepositoryImpl.this.Insert[_, A])(implicit evidence$4: zio.schema.Schema[A]): zio.ZIO[EmployeeRepositoryImpl.this.SqlDriver,Exception,Int] <and>[0m
+[0m[[0m[31merror[0m] [0m[0m  (delete: EmployeeRepositoryImpl.this.Delete[_])zio.ZIO[EmployeeRepositoryImpl.this.SqlDriver,Exception,Int] <and>[0m
+[0m[[0m[31merror[0m] [0m[0m  [A](read: EmployeeRepositoryImpl.this.Read[A]): zio.stream.ZStream[EmployeeRepositoryImpl.this.SqlDriver,Exception,A] <and>[0m
+[0m[[0m[31merror[0m] [0m[0m  [R <: EmployeeRepositoryImpl.this.SqlDriver, A](tx: EmployeeRepositoryImpl.this.ZTransaction[R,Exception,A])(implicit evidence$2: zio.Tag[R], evidence$3: zio.IsNotIntersection[R]): zio.ZManaged[R,Exception,A][0m
+[0m[[0m[31merror[0m] [0m[0m cannot be applied to (EmployeeRepositoryImpl.this.Update[EmployeeRepositoryImpl.this.employees.TableType])[0m
+[0m[[0m[31merror[0m] [0m[0m    execute([0m
+[0m[[0m[31merror[0m] [0m[0m    ^[0m
 [0m[[0m[31merror[0m] [0m[0mone error found[0m

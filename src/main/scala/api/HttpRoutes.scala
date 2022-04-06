@@ -5,7 +5,7 @@ import model.Employee
 import repo.EmployeeRepository
 import zhttp.http._
 import zio.ZIO
-import zio.json.DecoderOps
+import zio.json.{DecoderOps, EncoderOps}
 
 object HttpRoutes {
 
@@ -18,7 +18,7 @@ object HttpRoutes {
         .findById(id)
         .either
         .map {
-          case Right(customer) => Response.json(customer.toString)
+          case Right(customer) => Response.json(customer.toJson)
           case Left(e)         => Response.text(e.getMessage)
         }
 

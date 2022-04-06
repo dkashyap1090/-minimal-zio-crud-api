@@ -37,7 +37,7 @@ trait PostgresTableDescription extends PostgresModule {
         .mapError {
           case None =>
             RepositoryError(
-              new RuntimeException(s"Order with id $id does not exists")
+              new RuntimeException(s"Employee with id $id does not exists")
             )
           case Some(e) => RepositoryError(e.getCause())
         }
