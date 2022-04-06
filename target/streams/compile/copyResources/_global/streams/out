@@ -1,0 +1,3 @@
+[0m[[0m[0mdebug[0m] [0m[0mCopy resource mappings: [0m
+[0m[[0m[0mdebug[0m] [0m[0m	(/Users/dhirendrakashyap/Projects/minimal-zio-crud-api/src/main/resources/init.sql,/Users/dhirendrakashyap/Projects/minimal-zio-crud-api/target/scala-2.13/classes/init.sql)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	(/Users/dhirendrakashyap/Projects/minimal-zio-crud-api/src/main/resources/application.conf,/Users/dhirendrakashyap/Projects/minimal-zio-crud-api/target/scala-2.13/classes/application.conf)[0m

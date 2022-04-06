@@ -1,0 +1,46 @@
+[0m[[0m[0mdebug[0m] [0m[0m> Exec(compile, Some(25a368b4-4529-4df3-96c3-06f365b19dce), Some(CommandSource(console0)))[0m
+[0m[[0m[0mdebug[0m] [0m[0mEvaluating tasks: Compile / compile[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0minfo[0m] [0m[0mcompiling 8 Scala sources to /Users/dhirendrakashyap/Projects/minimal-zio-crud-api/target/scala-2.13/classes ...[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/dhirendrakashyap/Projects/minimal-zio-crud-api/src/main/scala/json/JsonHelper.scala:8:78: magnolia: could not find JsonEncoder.Typeclass for type model.Role[0m
+[0m[[0m[31merror[0m] [0m[0m    in parameter 'role' of product type model.Employee[0m
+[0m[[0m[31merror[0m] [0m[0m  implicit val employeeEncoder: JsonEncoder[Employee] = DeriveJsonEncoder.gen[Employee][0m
+[0m[[0m[31merror[0m] [0m[0m                                                                             ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/dhirendrakashyap/Projects/minimal-zio-crud-api/src/main/scala/json/JsonHelper.scala:10:78: magnolia: could not find JsonDecoder.Typeclass for type model.Role[0m
+[0m[[0m[31merror[0m] [0m[0m    in parameter 'role' of product type model.Employee[0m
+[0m[[0m[31merror[0m] [0m[0m  implicit val employeeDecoder: JsonDecoder[Employee] = DeriveJsonDecoder.gen[Employee][0m
+[0m[[0m[31merror[0m] [0m[0m                                                                             ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/dhirendrakashyap/Projects/minimal-zio-crud-api/src/main/scala/repo/EmployeeRepositoryImpl.scala:25:47: type mismatch;[0m
+[0m[[0m[31merror[0m] [0m[0m found   : ((java.util.UUID, String, model.Role)) => model.Employee[0m
+[0m[[0m[31merror[0m] [0m[0m required: ((java.util.UUID, String, String)) => ?[0m
+[0m[[0m[31merror[0m] [0m[0m      execute(selectAll.to((Employee.apply _).tupled))[0m
+[0m[[0m[31merror[0m] [0m[0m                                              ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/dhirendrakashyap/Projects/minimal-zio-crud-api/src/main/scala/repo/EmployeeRepositoryImpl.scala:35:47: type mismatch;[0m
+[0m[[0m[31merror[0m] [0m[0m found   : ((java.util.UUID, String, model.Role)) => model.Employee[0m
+[0m[[0m[31merror[0m] [0m[0m required: ((java.util.UUID, String, String)) => ?[0m
+[0m[[0m[31merror[0m] [0m[0m      execute(selectAll.to((Employee.apply _).tupled))[0m
+[0m[[0m[31merror[0m] [0m[0m                                              ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/dhirendrakashyap/Projects/minimal-zio-crud-api/src/main/scala/repo/EmployeeRepositoryImpl.scala:45:47: type mismatch;[0m
+[0m[[0m[31merror[0m] [0m[0m found   : ((java.util.UUID, String, model.Role)) => model.Employee[0m
+[0m[[0m[31merror[0m] [0m[0m required: ((java.util.UUID, String, String)) => ?[0m
+[0m[[0m[31merror[0m] [0m[0m      execute(selectAll.to((Employee.apply _).tupled))[0m
+[0m[[0m[31merror[0m] [0m[0m                                              ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/dhirendrakashyap/Projects/minimal-zio-crud-api/src/main/scala/repo/EmployeeRepositoryImpl.scala:55:47: type mismatch;[0m
+[0m[[0m[31merror[0m] [0m[0m found   : ((java.util.UUID, String, model.Role)) => model.Employee[0m
+[0m[[0m[31merror[0m] [0m[0m required: ((java.util.UUID, String, String)) => ?[0m
+[0m[[0m[31merror[0m] [0m[0m      execute(selectAll.to((Employee.apply _).tupled))[0m
+[0m[[0m[31merror[0m] [0m[0m                                              ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/dhirendrakashyap/Projects/minimal-zio-crud-api/src/main/scala/repo/EmployeeRepositoryImpl.scala:64:16: could not find implicit value for parameter schemaCC: zio.schema.Schema[(java.util.UUID, String, model.Role)][0m
+[0m[[0m[31merror[0m] [0m[0m        .values(data)[0m
+[0m[[0m[31merror[0m] [0m[0m               ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/dhirendrakashyap/Projects/minimal-zio-crud-api/src/main/scala/repo/EmployeeRepositoryImpl.scala:76:23: value employeeId is not a member of EmployeeRepositoryImpl.this.Table.Source{type ColumnHead = java.util.UUID; type ColumnTail = EmployeeRepositoryImpl.this.ColumnSet.Cons[String,EmployeeRepositoryImpl.this.ColumnSet.Cons[String,EmployeeRepositoryImpl.this.ColumnSet.Empty.type,String("role")],String("name")]; type AllColumnIdentities = String("employeeId") with String("name") with String("role") with Any; type HeadIdentity0 = String("employeeId"); val columnSet: EmployeeRepositoryImpl.this.ColumnSet.Cons[java.util.UUID,EmployeeRepositoryImpl.this.ColumnSet.Cons[String,EmployeeRepositoryImpl.this.ColumnSet.Cons[String,EmployeeRepositoryImpl.this.ColumnSet.Empty.type,String("role")],String("name")],String("employeeId")]{type ColumnsRepr[C] = (EmployeeRepositoryImpl.this.Expr[EmployeeRepositoryImpl.this.Features.Source[String("employeeId"),C],C,java.util.UUID], (EmployeeRepositoryImpl.this.Expr[EmployeeRepositoryImpl.this.Features.Source[String("name"),C],C,String], (EmployeeRepositoryImpl.this.Expr[EmployeeRepositoryImpl.this.Features.Source[String("role"),C],C,String], Unit)))}}[0m
+[0m[[0m[31merror[0m] [0m[0m            employees.employeeId,[0m
+[0m[[0m[31merror[0m] [0m[0m                      ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/dhirendrakashyap/Projects/minimal-zio-crud-api/src/main/scala/repo/EmployeeRepositoryImpl.scala:78:23: value role is not a member of EmployeeRepositoryImpl.this.Table.Source{type ColumnHead = java.util.UUID; type ColumnTail = EmployeeRepositoryImpl.this.ColumnSet.Cons[String,EmployeeRepositoryImpl.this.ColumnSet.Cons[String,EmployeeRepositoryImpl.this.ColumnSet.Empty.type,String("role")],String("name")]; type AllColumnIdentities = String("employeeId") with String("name") with String("role") with Any; type HeadIdentity0 = String("employeeId"); val columnSet: EmployeeRepositoryImpl.this.ColumnSet.Cons[java.util.UUID,EmployeeRepositoryImpl.this.ColumnSet.Cons[String,EmployeeRepositoryImpl.this.ColumnSet.Cons[String,EmployeeRepositoryImpl.this.ColumnSet.Empty.type,String("role")],String("name")],String("employeeId")]{type ColumnsRepr[C] = (EmployeeRepositoryImpl.this.Expr[EmployeeRepositoryImpl.this.Features.Source[String("employeeId"),C],C,java.util.UUID], (EmployeeRepositoryImpl.this.Expr[EmployeeRepositoryImpl.this.Features.Source[String("name"),C],C,String], (EmployeeRepositoryImpl.this.Expr[EmployeeRepositoryImpl.this.Features.Source[String("role"),C],C,String], Unit)))}}[0m
+[0m[[0m[31merror[0m] [0m[0m            employees.role[0m
+[0m[[0m[31merror[0m] [0m[0m                      ^[0m
+[0m[[0m[31merror[0m] [0m[0m9 errors found[0m
+[0m[[0m[31merror[0m] [0m[0m(Compile / [31mcompileIncremental[0m) Compilation failed[0m
+[0m[[0m[31merror[0m] [0m[0mTotal time: 9 s, completed 06-Apr-2022, 4:58:03 pm[0m
+[0m[[0m[0mdebug[0m] [0m[0m> Exec(shell, None, None)[0m
+[0m[[0m[0minfo[0m] [0m[0mshutting down sbt server[0m
