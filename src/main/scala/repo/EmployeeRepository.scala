@@ -9,7 +9,7 @@ import java.util.UUID
 
 trait EmployeeRepository {
   def findById(id: UUID): ZIO[Any, RepositoryError, Employee]
-  def updateById(employee: Employee): ZIO[Any, RepositoryError, Employee]
+  def updateById(employee: Employee): ZIO[Any, RepositoryError, Int]
   def deleteById(id: UUID): ZIO[Any, RepositoryError, Int]
   def add(employee: Employee): ZIO[Any, RepositoryError, Unit]
 }
@@ -20,7 +20,7 @@ object EmployeeRepository {
 
   def updateById(
       employee: Employee
-  ): ZIO[EmployeeRepository, RepositoryError, Employee] =
+  ): ZIO[EmployeeRepository, RepositoryError, Int] =
     ZIO.serviceWithZIO[EmployeeRepository](_.updateById(employee))
 
   def deleteById(id: UUID): ZIO[EmployeeRepository, RepositoryError, Int] =

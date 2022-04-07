@@ -1,0 +1,17 @@
+[0m[[0m[0mdebug[0m] [0m[0m> Exec(compile, Some(e3c10b51-06e0-45ca-8851-09ee85cc3e12), Some(CommandSource(console0)))[0m
+[0m[[0m[0mdebug[0m] [0m[0mEvaluating tasks: Compile / compile[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0minfo[0m] [0m[0mcompiling 1 Scala source to /Users/dhirendrakashyap/Projects/minimal-zio-crud-api/target/scala-2.13/classes ...[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/dhirendrakashyap/Projects/minimal-zio-crud-api/src/main/scala/repo/EmployeeRepositoryImpl.scala:41:7: overloaded method execute with alternatives:[0m
+[0m[[0m[31merror[0m] [0m[0m  [A](insert: EmployeeRepositoryImpl.this.Insert[_, A])(implicit evidence$4: zio.schema.Schema[A]): zio.ZIO[EmployeeRepositoryImpl.this.SqlDriver,Exception,Int] <and>[0m
+[0m[[0m[31merror[0m] [0m[0m  (delete: EmployeeRepositoryImpl.this.Delete[_])zio.ZIO[EmployeeRepositoryImpl.this.SqlDriver,Exception,Int] <and>[0m
+[0m[[0m[31merror[0m] [0m[0m  [A](read: EmployeeRepositoryImpl.this.Read[A]): zio.stream.ZStream[EmployeeRepositoryImpl.this.SqlDriver,Exception,A] <and>[0m
+[0m[[0m[31merror[0m] [0m[0m  [R <: EmployeeRepositoryImpl.this.SqlDriver, A](tx: EmployeeRepositoryImpl.this.ZTransaction[R,Exception,A])(implicit evidence$2: zio.Tag[R], evidence$3: zio.IsNotIntersection[R]): zio.ZManaged[R,Exception,A][0m
+[0m[[0m[31merror[0m] [0m[0m cannot be applied to (EmployeeRepositoryImpl.this.Update[EmployeeRepositoryImpl.this.employees.TableType])[0m
+[0m[[0m[31merror[0m] [0m[0m      execute(query)[0m
+[0m[[0m[31merror[0m] [0m[0m      ^[0m
+[0m[[0m[31merror[0m] [0m[0mone error found[0m
+[0m[[0m[31merror[0m] [0m[0m(Compile / [31mcompileIncremental[0m) Compilation failed[0m
+[0m[[0m[31merror[0m] [0m[0mTotal time: 2 s, completed 07-Apr-2022, 1:47:28 pm[0m
+[0m[[0m[0mdebug[0m] [0m[0m> Exec(shell, None, None)[0m
+[0m[[0m[0mdebug[0m] [0m[0mForcing garbage collection...[0m

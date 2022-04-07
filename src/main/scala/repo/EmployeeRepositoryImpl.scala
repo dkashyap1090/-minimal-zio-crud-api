@@ -30,23 +30,18 @@ class EmployeeRepositoryImpl(pool: ConnectionPool)
 
   override def updateById(
       employee: Employee
-  ): ZIO[Any, RepositoryError, Employee] = {
-    // TODO : Fix it
-//    execute(update(employees)
-//      .set("name", employee.name)
-//      .where(empId === employee.id))
-//      .provideLayer(driverLayer)
-//      .mapError(e => RepositoryError(e.getCause))
-    ???
+  ): ZIO[Any, RepositoryError, Int] = {
+    //TODO Fix This
+     val query =
+        update(employees)
+          .set(name, employee.name)
+          .set(role, employee.role)
+          .where(empId === employee.id)
 
-    execute(
-      update(employees)
-      .set(name, employee.name)
-      .set(role, employee.role)
-      .where(empId === employee.id)
-    )
-      .provideLayer(driverLayer)
-      .mapError(e => RepositoryError(e))
+    ZIO.logInfo(s"Query to update employee is ${renderUpdate(query)}")
+      execute(query)
+        .provideAndLog(driverLayer)
+        .mapError(e => RepositoryError(e.getCause))
   }
 
   override def deleteById(id: UUID): ZIO[Any, RepositoryError, Int] = {
